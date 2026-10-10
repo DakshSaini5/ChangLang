@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7f8fa" />
+    <meta name="description" content="A bilingual document workspace for translation, writing and review." />
+    <title>LangChain — Document workspace</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="root">
+      <div id="file-protocol-help" style="display:none;max-width:560px;margin:12vh auto;padding:32px;font:15px/1.6 system-ui,sans-serif;color:#202334">
+        <h1 style="font-size:24px">Start LangChain locally</h1>
+        <p>This app needs its development server. Opening <code>index.html</code> directly as a file cannot load the app modules.</p>
+        <p>In the LangChain project folder, run <code>npm run dev</code>, then open <a href="http://localhost:5173">http://localhost:5173</a>.</p>
+      </div>
+    </div>
+    <script>
+      if (location.protocol === 'file:') {
+        document.getElementById('file-protocol-help').style.display = 'block';
+      }
+    </script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
